@@ -11,6 +11,4 @@ Route.get('/login', async ({ view }) => {
   return view.render("auth/login");
 })
 
-Route.post('/signup', async ({ view }) => {
-  return 'heyy';
-})
+Route.post('/signup', 'SignUpController.index')
