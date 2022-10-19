@@ -5,5 +5,10 @@ Route.get('/', async ({ view }) => {
 })
 
 Route.get('/signup', async ({ view }) => {
-  return view.render('signup')
+  return view.render("auth/signup");
 })
+Route.get('/login', async ({ view }) => {
+  return view.render("auth/login");
+})
+
+Route.post('/signup', 'SignUpController.index')
